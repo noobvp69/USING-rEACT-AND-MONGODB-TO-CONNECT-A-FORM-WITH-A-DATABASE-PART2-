@@ -1,0 +1,40 @@
+extend layout 
+
+block content
+  
+    h1 Submit Your Information
+    form(action="/submit", method="POST")
+      label(for="name") Name:
+      input(type="text", id="name", name="name", required)
+      br
+      label(for="email") Email:
+      input(type="email", id="email", name="email", required)
+      br
+      label(for="phone") Phone Number:
+      input(type="tel", id="phone", name="phone", required, placeholder="e.g., 123-456-7890")
+      label(for="address") Address:
+      input(type="text", id="address", name="address", required)
+      label Gender:
+      input(type="radio", id="male", name="gender", value="male", required)
+      label.qualification-label(for="male") Male
+      input(type="radio", id="female", name="gender", value="female", required)
+      label.qualification-label(for="female") Female
+      
+      label Qualification:
+      input(type="checkbox", id="bsc", name="qualification", value="BSc")
+      label.qualification-label(for="bsc") BSc
+      input(type="checkbox", id="btech", name="qualification", value="BTEC")
+      label.qualification-label(for="btec") BTECH
+      input(type="checkbox", id="msc", name="qualification", value="MSc")
+      label.qualification-label(for="msc") MSc
+      .form-group
+      label(for="district") District:
+      select(id="district", name="district", required)
+        option(value="") Select a district
+        option(value="Kozhikode") Kozhikode
+        option(value="Kollam") Kollam
+        option(value="Kottayam") Kottayam
+
+ 
+      
+      button(type="submit") Submit
